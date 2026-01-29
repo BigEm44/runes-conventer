@@ -27,7 +27,7 @@ export default function Button() {
       onClick={downloadImage}
       disabled={!number}
       className={cn(
-        "w-152.5 mx-auto rounded-md bg-sky-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs cursor-pointer transition-[all_0.2s,box-shadow_0.1s]",
+        "sm:w-56 md:w-100 lg:w-152.5 mx-auto rounded-md bg-sky-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs cursor-pointer transition-[all_0.2s,box-shadow_0.1s]",
         {
           "hover:bg-sky-700": number !== undefined,
           "bg-gray-400 cursor-not-allowed": !number,
