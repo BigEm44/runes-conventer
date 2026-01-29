@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { GlobalStateContext } from "../exports/GlobalStateContext";
 
 export default function GlobalStateContextProvider({
@@ -8,8 +8,15 @@ export default function GlobalStateContextProvider({
 }) {
   const [number, setNumber] = useState("");
   const svgRef = useRef<SVGSVGElement>(null!);
+  const inputRef = useRef<HTMLInputElement>(null!);
 
-  const contextValue = { number, setNumber, svgRef };
+  useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, []);
+
+  const contextValue = { number, setNumber, svgRef, inputRef };
 
   return (
     <GlobalStateContext.Provider value={contextValue}>

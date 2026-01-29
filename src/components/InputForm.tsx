@@ -1,7 +1,7 @@
 import { useGlobalStateContext } from "../lib/hooks";
 
 export default function InputForm() {
-  const { number, setNumber } = useGlobalStateContext();
+  const { number, setNumber, inputRef } = useGlobalStateContext();
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement, HTMLInputElement>,
@@ -17,6 +17,7 @@ export default function InputForm() {
     <form className="flex w-full justify-center ">
       <input
         id="number-input"
+        ref={inputRef}
         type="text"
         inputMode="numeric"
         value={number}
