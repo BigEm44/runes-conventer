@@ -17,7 +17,8 @@ export default function InputForm() {
     <form className="flex w-full justify-center ">
       <input
         id="number-input"
-        type="number"
+        type="text"
+        inputMode="numeric"
         value={number}
         onChange={handleInputChange}
         placeholder="Enter number from 1 to 9999"

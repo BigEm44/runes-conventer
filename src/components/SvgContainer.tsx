@@ -13,6 +13,14 @@ export default function SvgContainer() {
   return (
     <div className=" group my-10">
       <div className="relative bg-white border border-slate-200 rounded-xl flex items-center justify-center p-6 shadow-sm min-w-252.5 min-h-90">
+        {!number && (
+          <div className="absolute inset-0 flex flex-col items-center justify-center space-y-3 z-10">
+            <div className="w-1 h-32 bg-slate-100 rounded-full" />
+            <span className="text-slate-400 font-medium text-md">
+              Enter digits to see the rune
+            </span>
+          </div>
+        )}
         <svg
           ref={svgRef}
           width="200"
