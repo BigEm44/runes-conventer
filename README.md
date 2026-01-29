@@ -38,3 +38,11 @@ Instead of hardcoding 40 different shapes, this app uses **geometric transformat
    ```bash
    git clone https://github.com/BigEm44/runes-conventer.git
    ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
